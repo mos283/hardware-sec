@@ -1,0 +1,2 @@
+vhdl isim_temp "netgen/par/rc5dup_timesim.vhd"
+vhdl isim_temp "checking.vhd"

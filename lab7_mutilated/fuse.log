@@ -1,0 +1,44 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_mutilated/testbench_isim_beh.exe -prj C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_mutilated/testbench_beh.prj work.testbench 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_mutilated/srom.vhd" into library work
+Parsing VHDL file "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_mutilated/roundkey.vhd" into library work
+Parsing VHDL file "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_mutilated/Hex2SevenSegConverter.vhd" into library work
+Parsing VHDL file "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_mutilated/encryptfsm.vhd" into library work
+Parsing VHDL file "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_mutilated/decrypt.vhd" into library work
+Parsing VHDL file "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_mutilated/rc5dup.vhd" into library work
+Parsing VHDL file "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_mutilated/checking.vhd" into library work
+Starting static elaboration
+WARNING:HDLCompiler:794 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_mutilated/roundkey.vhd" Line 304: Statement might not cover all choices ; 'others' clause recommended
+WARNING:HDLCompiler:794 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_mutilated/encryptfsm.vhd" Line 232: Statement might not cover all choices ; 'others' clause recommended
+WARNING:HDLCompiler:794 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_mutilated/encryptfsm.vhd" Line 266: Statement might not cover all choices ; 'others' clause recommended
+WARNING:HDLCompiler:794 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_mutilated/decrypt.vhd" Line 275: Statement might not cover all choices ; 'others' clause recommended
+WARNING:HDLCompiler:794 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_mutilated/decrypt.vhd" Line 309: Statement might not cover all choices ; 'others' clause recommended
+WARNING:HDLCompiler:794 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_mutilated/rc5dup.vhd" Line 233: Statement might not cover all choices ; 'others' clause recommended
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package srom
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling package vcomponents
+Compiling package textio
+Compiling package vital_timing
+Compiling package vital_primitives
+Compiling package vpkg
+Compiling architecture lut6_v of entity LUT6 [\LUT6("1000000000000000000000000...]
+Compiling architecture behavioral of entity roundkey [roundkey_default]
+Compiling architecture behavioral of entity encrypt [encrypt_default]
+Compiling architecture behavioral of entity decrypt [decrypt_default]
+Compiling architecture behavioral of entity Hex2LED [hex2led_default]
+Compiling architecture behavioral of entity rc5dup [rc5dup_default]
+Compiling architecture behavior of entity testbench
+Time Resolution for simulation is 1ps.
+Waiting for 9 sub-compilation(s) to finish...
+Compiled 28 VHDL Units
+Built simulation executable C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_mutilated/testbench_isim_beh.exe
+Fuse Memory Usage: 60568 KB
+Fuse CPU Usage: 968 ms

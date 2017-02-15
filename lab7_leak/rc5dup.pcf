@@ -1,0 +1,30 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Feb 14 10:19:43 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "key_gen_comp/kx<13>" LOCATE = SITE "SLICE_X11Y79" LEVEL 1;
+COMP "key_gen_comp/kx<14>" LOCATE = SITE "SLICE_X10Y79" LEVEL 1;
+COMP "key_gen_comp/kx<15>" LOCATE = SITE "SLICE_X13Y79" LEVEL 1;
+COMP "key_gen_comp/kx<12>" LOCATE = SITE "SLICE_X12Y79" LEVEL 1;
+COMP "key_gen_comp/kx<8>" LOCATE = SITE "SLICE_X14Y79" LEVEL 1;
+COMP "key_gen_comp/kx<9>" LOCATE = SITE "SLICE_X15Y79" LEVEL 1;
+COMP "led_4_OBUF" LOCATE = SITE "SLICE_X28Y77" LEVEL 1;
+COMP "key_gen_comp/prSt_FSM_FFd3" LOCATE = SITE "SLICE_X28Y79" LEVEL 1;
+COMP "key_gen_comp/inkey_0<27>" LOCATE = SITE "SLICE_X28Y82" LEVEL 1;
+COMP "key_gen_comp/inkey_0<19>" LOCATE = SITE "SLICE_X28Y83" LEVEL 1;
+COMP "key_gen_comp/led<4>" LOCATE = SITE "SLICE_X29Y77" LEVEL 1;
+COMP "led_1_OBUF" LOCATE = SITE "SLICE_X29Y78" LEVEL 1;
+COMP "key_gen_comp/inkey_0<31>" LOCATE = SITE "SLICE_X29Y82" LEVEL 1;
+COMP "key_gen_comp/inkey_0<23>" LOCATE = SITE "SLICE_X29Y83" LEVEL 1;
+COMP "key_gen_comp/kx<7>" LOCATE = SITE "SLICE_X31Y83" LEVEL 1;
+COMP "key_gen_comp/led<6>" LOCATE = SITE "SLICE_X30Y77" LEVEL 1;
+COMP "led_2_OBUF" LOCATE = SITE "SLICE_X30Y78" LEVEL 1;
+COMP "key_gen_comp/kx<11>" LOCATE = SITE "SLICE_X30Y79" LEVEL 1;
+COMP "key_gen_comp/inkey_0<3>" LOCATE = SITE "SLICE_X30Y82" LEVEL 1;
+COMP "key_gen_comp/kx<6>" LOCATE = SITE "SLICE_X30Y83" LEVEL 1;
+COMP "key_gen_comp/inkey_0<15>" LOCATE = SITE "SLICE_X32Y82" LEVEL 1;
+COMP "key_gen_comp/led<7>" LOCATE = SITE "SLICE_X33Y77" LEVEL 1;
+COMP "key_gen_comp/led<2>" LOCATE = SITE "SLICE_X33Y78" LEVEL 1;
+SCHEMATIC END;
+

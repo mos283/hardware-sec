@@ -1,0 +1,6 @@
+vhdl isim_temp "srom.vhd"
+vhdl isim_temp "roundkey.vhd"
+vhdl isim_temp "Hex2SevenSegConverter.vhd"
+vhdl isim_temp "encryptfsm.vhd"
+vhdl isim_temp "decrypt.vhd"
+vhdl isim_temp "rc5.vhd"

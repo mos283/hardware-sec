@@ -1,0 +1,102 @@
+(DELAYFILE
+  (SDFVERSION "3.0")
+  (DESIGN "trojan")
+  (DATE "Sun Feb 12 17:56:57 2017")
+  (VENDOR "Xilinx")
+  (PROGRAM "Xilinx SDF Writer")
+  (VERSION "P.20131013")
+  (DIVIDER /)
+  (VOLTAGE 0.95)
+  (TEMPERATURE 85)
+  (TIMESCALE 1 ps)
+  (CELL (CELLTYPE "X_IBUF_INTERMDISABLE_TPWRGT")
+    (INSTANCE sense_0_IBUF)
+      (DELAY
+        (ABSOLUTE
+          (PORT I ( 0 )( 0 ))
+          (IOPATH I O ( 837 )( 837 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_IBUF_INTERMDISABLE_TPWRGT")
+    (INSTANCE aStp30_IBUF)
+      (DELAY
+        (ABSOLUTE
+          (PORT I ( 0 )( 0 ))
+          (IOPATH I O ( 821 )( 821 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_IBUF_INTERMDISABLE_TPWRGT")
+    (INSTANCE sense_3_IBUF)
+      (DELAY
+        (ABSOLUTE
+          (PORT I ( 0 )( 0 ))
+          (IOPATH I O ( 845 )( 845 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_IBUF_INTERMDISABLE_TPWRGT")
+    (INSTANCE sense_2_IBUF)
+      (DELAY
+        (ABSOLUTE
+          (PORT I ( 0 )( 0 ))
+          (IOPATH I O ( 841 )( 841 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_LUT6")
+    (INSTANCE Mmux_aAdd3111)
+      (DELAY
+        (ABSOLUTE
+          (PORT ADR0 ( 1016 )( 1016 ))
+          (PORT ADR1 ( 1004 )( 1004 ))
+          (PORT ADR2 ( 762 )( 762 ))
+          (PORT ADR3 ( 825 )( 825 ))
+          (PORT ADR4 ( 705 )( 705 ))
+          (PORT ADR5 ( 677 )( 677 ))
+          (IOPATH ADR0 O ( 97 )( 97 ))
+          (IOPATH ADR1 O ( 97 )( 97 ))
+          (IOPATH ADR2 O ( 97 )( 97 ))
+          (IOPATH ADR3 O ( 97 )( 97 ))
+          (IOPATH ADR4 O ( 97 )( 97 ))
+          (IOPATH ADR5 O ( 97 )( 97 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_OBUF")
+    (INSTANCE aAdd31_OBUF)
+      (DELAY
+        (ABSOLUTE
+          (PORT I ( 0 )( 0 ))
+          (IOPATH I O ( 2253 )( 2253 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_IBUF_INTERMDISABLE_TPWRGT")
+    (INSTANCE aStp3_IBUF)
+      (DELAY
+        (ABSOLUTE
+          (PORT I ( 0 )( 0 ))
+          (IOPATH I O ( 809 )( 809 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_IBUF_INTERMDISABLE_TPWRGT")
+    (INSTANCE sense_1_IBUF)
+      (DELAY
+        (ABSOLUTE
+          (PORT I ( 0 )( 0 ))
+          (IOPATH I O ( 831 )( 831 ))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_BUF")
+    (INSTANCE NlwBufferBlock_aAdd31_OBUF_I)
+      (DELAY
+        (ABSOLUTE
+          (IOPATH I O ( 1227 )( 1227 ))
+        )
+      )
+  )
+)

@@ -1,0 +1,27 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_trojaned/testbench_isim_par.exe -prj C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_trojaned/testbench_par.prj work.testbench 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_trojaned/netgen/par/rc5dup_timesim.vhd" into library work
+Parsing VHDL file "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_trojaned/checking.vhd" into library work
+ERROR:HDLCompiler:104 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_trojaned/checking.vhd" Line 6: Cannot find <srom> in library <work>. Please ensure that the library was compiled, and that a library and a use clause are present in the VHDL file.
+ERROR:HDLCompiler:854 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_trojaned/checking.vhd" Line 8: Unit <testbench> ignored due to previous errors.
+ERROR:HDLCompiler:374 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_trojaned/checking.vhd" Line 11: Entity <testbench> is not yet compiled.
+ERROR:HDLCompiler:69 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_trojaned/checking.vhd" Line 15: <std_logic_vector> is not declared.
+ERROR:HDLCompiler:69 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_trojaned/checking.vhd" Line 16: <std_logic> is not declared.
+ERROR:HDLCompiler:69 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_trojaned/checking.vhd" Line 17: <std_logic> is not declared.
+ERROR:HDLCompiler:69 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_trojaned/checking.vhd" Line 18: <std_logic> is not declared.
+ERROR:HDLCompiler:69 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_trojaned/checking.vhd" Line 19: <std_logic> is not declared.
+ERROR:HDLCompiler:69 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_trojaned/checking.vhd" Line 20: <std_logic_vector> is not declared.
+ERROR:HDLCompiler:69 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_trojaned/checking.vhd" Line 21: <std_logic_vector> is not declared.
+ERROR:HDLCompiler:69 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_trojaned/checking.vhd" Line 25: <std_logic_vector> is not declared.
+ERROR:HDLCompiler:69 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_trojaned/checking.vhd" Line 26: <std_logic> is not declared.
+ERROR:HDLCompiler:69 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_trojaned/checking.vhd" Line 27: <std_logic> is not declared.
+ERROR:HDLCompiler:69 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_trojaned/checking.vhd" Line 28: <std_logic> is not declared.
+ERROR:HDLCompiler:69 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_trojaned/checking.vhd" Line 29: <std_logic> is not declared.
+ERROR:HDLCompiler:69 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_trojaned/checking.vhd" Line 30: <std_logic> is not declared.
+ERROR:HDLCompiler:69 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_trojaned/checking.vhd" Line 31: <std_logic> is not declared.
+ERROR:HDLCompiler:69 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_trojaned/checking.vhd" Line 32: <std_logic> is not declared.
+ERROR:HDLCompiler:69 - "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_trojaned/checking.vhd" Line 35: <std_logic_vector> is not declared.
+Sorry, too many errors..

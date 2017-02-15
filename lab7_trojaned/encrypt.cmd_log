@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/mos28/Documents/xilinx proj/lab7/encrypt.xst" -ofn "C:/Users/mos28/Documents/xilinx proj/lab7/encrypt.syr" 

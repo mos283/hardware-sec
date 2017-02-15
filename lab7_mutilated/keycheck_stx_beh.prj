@@ -1,0 +1,3 @@
+vhdl isim_temp "srom.vhd"
+vhdl isim_temp "roundkey.vhd"
+vhdl isim_temp "keycheck.vhd"

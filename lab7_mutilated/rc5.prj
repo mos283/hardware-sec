@@ -1,0 +1,6 @@
+vhdl work "srom.vhd"
+vhdl work "roundkey.vhd"
+vhdl work "Hex2SevenSegConverter.vhd"
+vhdl work "encryptfsm.vhd"
+vhdl work "decrypt.vhd"
+vhdl work "rc5.vhd"

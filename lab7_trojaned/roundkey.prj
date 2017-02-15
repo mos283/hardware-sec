@@ -1,0 +1,2 @@
+vhdl work "srom.vhd"
+vhdl work "roundkey.vhd"

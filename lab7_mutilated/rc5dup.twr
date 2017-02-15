@@ -1,0 +1,1005 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml rc5dup.twx rc5dup.ncd -o rc5dup.twr rc5dup.pcf -ucf
+Nexys4DDR_Master.ucf
+
+Design file:              rc5dup.ncd
+Physical constraint file: rc5dup.pcf
+Device,package,speed:     xc7a100t,csg324,C,-3 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 80 MHz HIGH 
+50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 3469964567 paths analyzed, 4625 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  12.424ns.
+--------------------------------------------------------------------------------
+
+Paths for end point key_gen_comp/b_8 (SLICE_X30Y68.B2), 9129810 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.076ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               key_gen_comp/jCnt_0 (FF)
+  Destination:          key_gen_comp/b_8 (FF)
+  Requirement:          12.500ns
+  Data Path Delay:      12.353ns (Levels of Logic = 18)
+  Clock Path Skew:      -0.036ns (0.568 - 0.604)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 12.500ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: key_gen_comp/jCnt_0 to key_gen_comp/b_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y85.AQ      Tcko                  0.341   key_gen_comp/jCnt<4>
+                                                       key_gen_comp/jCnt_0
+    SLICE_X64Y71.A5      net (fanout=248)      1.270   key_gen_comp/jCnt<0>
+    SLICE_X64Y71.A       Tilo                  0.097   key_gen_comp/sArr_1<15>
+                                                       key_gen_comp/mux5_10
+    SLICE_X65Y71.D2      net (fanout=1)        0.638   key_gen_comp/mux5_10
+    SLICE_X65Y71.CMUX    Topdc                 0.408   key_gen_comp/mux5_7
+                                                       key_gen_comp/mux5_4
+                                                       key_gen_comp/mux5_2_f7
+    SLICE_X44Y73.C4      net (fanout=1)        1.084   key_gen_comp/n0687<14>
+    SLICE_X44Y73.CMUX    Tilo                  0.258   key_gen_comp/sAdd<15>
+                                                       key_gen_comp/Madd_sAdd14
+    SLICE_X44Y73.D3      net (fanout=2)        0.454   key_gen_comp/Madd_sAdd14
+    SLICE_X44Y73.COUT    Topcyd                0.396   key_gen_comp/sAdd<15>
+                                                       key_gen_comp/Madd_sAdd_lut<0>15
+                                                       key_gen_comp/Madd_sAdd_cy<0>_14
+    SLICE_X44Y74.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>15
+    SLICE_X44Y74.COUT    Tbyp                  0.089   key_gen_comp/sAdd<19>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_18
+    SLICE_X44Y75.CIN     net (fanout=1)        0.007   key_gen_comp/Madd_sAdd_cy<0>19
+    SLICE_X44Y75.COUT    Tbyp                  0.089   key_gen_comp/sAdd<23>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_22
+    SLICE_X44Y76.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>23
+    SLICE_X44Y76.COUT    Tbyp                  0.089   key_gen_comp/sAdd<27>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_26
+    SLICE_X44Y77.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>27
+    SLICE_X44Y77.BQ      Tito_logic            0.481   key_gen_comp/sAdd<29>
+                                                       key_gen_comp/Madd_sAdd_xor<0>_30
+                                                       key_gen_comp/sAdd<29>_rt
+    SLICE_X34Y67.A6      net (fanout=3)        0.656   key_gen_comp/sAdd<29>
+    SLICE_X34Y67.COUT    Topcya                0.476   key_gen_comp/Madd_bAShAdd_cy<3>
+                                                       key_gen_comp/Madd_bAShAdd_lut<0>
+                                                       key_gen_comp/Madd_bAShAdd_cy<3>
+    SLICE_X34Y68.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<3>
+    SLICE_X34Y68.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<7>
+                                                       key_gen_comp/Madd_bAShAdd_cy<7>
+    SLICE_X34Y69.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<7>
+    SLICE_X34Y69.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<11>
+                                                       key_gen_comp/Madd_bAShAdd_cy<11>
+    SLICE_X34Y70.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<11>
+    SLICE_X34Y70.AMUX    Tcina                 0.269   key_gen_comp/Madd_bAShAdd_cy<15>
+                                                       key_gen_comp/Madd_bAShAdd_cy<15>
+    SLICE_X28Y65.A2      net (fanout=2)        0.983   key_gen_comp/bAShAdd<12>
+    SLICE_X28Y65.COUT    Topcya                0.492   key_gen_comp/Madd_lAdd_cy<15>
+                                                       key_gen_comp/Madd_lAdd_lut<12>
+                                                       key_gen_comp/Madd_lAdd_cy<15>
+    SLICE_X28Y66.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_lAdd_cy<15>
+    SLICE_X28Y66.COUT    Tbyp                  0.089   key_gen_comp/Madd_lAdd_cy<19>
+                                                       key_gen_comp/Madd_lAdd_cy<19>
+    SLICE_X28Y67.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_lAdd_cy<19>
+    SLICE_X28Y67.CMUX    Tcinc                 0.314   key_gen_comp/Madd_lAdd_cy<23>
+                                                       key_gen_comp/Madd_lAdd_cy<23>
+    SLICE_X15Y64.C2      net (fanout=4)        1.283   key_gen_comp/lAdd<22>
+    SLICE_X15Y64.C       Tilo                  0.097   key_gen_comp/bAShAdd<3>_mmx_out13
+                                                       key_gen_comp/bAShAdd<1>71
+    SLICE_X15Y64.D4      net (fanout=10)       0.353   key_gen_comp/bAShAdd<1>_mmx_out15
+    SLICE_X15Y64.D       Tilo                  0.097   key_gen_comp/bAShAdd<3>_mmx_out13
+                                                       key_gen_comp/bAShAdd<3>51
+    SLICE_X30Y68.B2      net (fanout=10)       1.334   key_gen_comp/bAShAdd<3>_mmx_out13
+    SLICE_X30Y68.CLK     Tas                   0.025   key_gen_comp/b<9>
+                                                       key_gen_comp/Mmux_lShf311
+                                                       key_gen_comp/b_8
+    -------------------------------------------------  ---------------------------
+    Total                                     12.353ns (4.291ns logic, 8.062ns route)
+                                                       (34.7% logic, 65.3% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.077ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               key_gen_comp/jCnt_0 (FF)
+  Destination:          key_gen_comp/b_8 (FF)
+  Requirement:          12.500ns
+  Data Path Delay:      12.352ns (Levels of Logic = 18)
+  Clock Path Skew:      -0.036ns (0.568 - 0.604)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 12.500ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: key_gen_comp/jCnt_0 to key_gen_comp/b_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y85.AQ      Tcko                  0.341   key_gen_comp/jCnt<4>
+                                                       key_gen_comp/jCnt_0
+    SLICE_X64Y71.A5      net (fanout=248)      1.270   key_gen_comp/jCnt<0>
+    SLICE_X64Y71.A       Tilo                  0.097   key_gen_comp/sArr_1<15>
+                                                       key_gen_comp/mux5_10
+    SLICE_X65Y71.D2      net (fanout=1)        0.638   key_gen_comp/mux5_10
+    SLICE_X65Y71.CMUX    Topdc                 0.408   key_gen_comp/mux5_7
+                                                       key_gen_comp/mux5_4
+                                                       key_gen_comp/mux5_2_f7
+    SLICE_X44Y73.C4      net (fanout=1)        1.084   key_gen_comp/n0687<14>
+    SLICE_X44Y73.CMUX    Tilo                  0.258   key_gen_comp/sAdd<15>
+                                                       key_gen_comp/Madd_sAdd14
+    SLICE_X44Y73.D3      net (fanout=2)        0.454   key_gen_comp/Madd_sAdd14
+    SLICE_X44Y73.COUT    Topcyd                0.396   key_gen_comp/sAdd<15>
+                                                       key_gen_comp/Madd_sAdd_lut<0>15
+                                                       key_gen_comp/Madd_sAdd_cy<0>_14
+    SLICE_X44Y74.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>15
+    SLICE_X44Y74.COUT    Tbyp                  0.089   key_gen_comp/sAdd<19>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_18
+    SLICE_X44Y75.CIN     net (fanout=1)        0.007   key_gen_comp/Madd_sAdd_cy<0>19
+    SLICE_X44Y75.COUT    Tbyp                  0.089   key_gen_comp/sAdd<23>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_22
+    SLICE_X44Y76.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>23
+    SLICE_X44Y76.COUT    Tbyp                  0.089   key_gen_comp/sAdd<27>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_26
+    SLICE_X44Y77.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>27
+    SLICE_X44Y77.BQ      Tito_logic            0.481   key_gen_comp/sAdd<29>
+                                                       key_gen_comp/Madd_sAdd_xor<0>_30
+                                                       key_gen_comp/sAdd<29>_rt
+    SLICE_X34Y67.A6      net (fanout=3)        0.656   key_gen_comp/sAdd<29>
+    SLICE_X34Y67.COUT    Topcya                0.476   key_gen_comp/Madd_bAShAdd_cy<3>
+                                                       key_gen_comp/Madd_bAShAdd_lut<0>
+                                                       key_gen_comp/Madd_bAShAdd_cy<3>
+    SLICE_X34Y68.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<3>
+    SLICE_X34Y68.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<7>
+                                                       key_gen_comp/Madd_bAShAdd_cy<7>
+    SLICE_X34Y69.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<7>
+    SLICE_X34Y69.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<11>
+                                                       key_gen_comp/Madd_bAShAdd_cy<11>
+    SLICE_X34Y70.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<11>
+    SLICE_X34Y70.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<15>
+                                                       key_gen_comp/Madd_bAShAdd_cy<15>
+    SLICE_X34Y71.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<15>
+    SLICE_X34Y71.BMUX    Tcinb                 0.342   key_gen_comp/Madd_bAShAdd_cy<19>
+                                                       key_gen_comp/Madd_bAShAdd_cy<19>
+    SLICE_X28Y66.B2      net (fanout=2)        0.889   key_gen_comp/bAShAdd<17>
+    SLICE_X28Y66.COUT    Topcyb                0.509   key_gen_comp/Madd_lAdd_cy<19>
+                                                       key_gen_comp/Madd_lAdd_lut<17>
+                                                       key_gen_comp/Madd_lAdd_cy<19>
+    SLICE_X28Y67.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_lAdd_cy<19>
+    SLICE_X28Y67.CMUX    Tcinc                 0.314   key_gen_comp/Madd_lAdd_cy<23>
+                                                       key_gen_comp/Madd_lAdd_cy<23>
+    SLICE_X15Y64.C2      net (fanout=4)        1.283   key_gen_comp/lAdd<22>
+    SLICE_X15Y64.C       Tilo                  0.097   key_gen_comp/bAShAdd<3>_mmx_out13
+                                                       key_gen_comp/bAShAdd<1>71
+    SLICE_X15Y64.D4      net (fanout=10)       0.353   key_gen_comp/bAShAdd<1>_mmx_out15
+    SLICE_X15Y64.D       Tilo                  0.097   key_gen_comp/bAShAdd<3>_mmx_out13
+                                                       key_gen_comp/bAShAdd<3>51
+    SLICE_X30Y68.B2      net (fanout=10)       1.334   key_gen_comp/bAShAdd<3>_mmx_out13
+    SLICE_X30Y68.CLK     Tas                   0.025   key_gen_comp/b<9>
+                                                       key_gen_comp/Mmux_lShf311
+                                                       key_gen_comp/b_8
+    -------------------------------------------------  ---------------------------
+    Total                                     12.352ns (4.384ns logic, 7.968ns route)
+                                                       (35.5% logic, 64.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.080ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               key_gen_comp/jCnt_0 (FF)
+  Destination:          key_gen_comp/b_8 (FF)
+  Requirement:          12.500ns
+  Data Path Delay:      12.349ns (Levels of Logic = 18)
+  Clock Path Skew:      -0.036ns (0.568 - 0.604)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 12.500ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: key_gen_comp/jCnt_0 to key_gen_comp/b_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y85.AQ      Tcko                  0.341   key_gen_comp/jCnt<4>
+                                                       key_gen_comp/jCnt_0
+    SLICE_X64Y71.A5      net (fanout=248)      1.270   key_gen_comp/jCnt<0>
+    SLICE_X64Y71.A       Tilo                  0.097   key_gen_comp/sArr_1<15>
+                                                       key_gen_comp/mux5_10
+    SLICE_X65Y71.D2      net (fanout=1)        0.638   key_gen_comp/mux5_10
+    SLICE_X65Y71.CMUX    Topdc                 0.408   key_gen_comp/mux5_7
+                                                       key_gen_comp/mux5_4
+                                                       key_gen_comp/mux5_2_f7
+    SLICE_X44Y73.C4      net (fanout=1)        1.084   key_gen_comp/n0687<14>
+    SLICE_X44Y73.CMUX    Tilo                  0.258   key_gen_comp/sAdd<15>
+                                                       key_gen_comp/Madd_sAdd14
+    SLICE_X44Y73.D3      net (fanout=2)        0.454   key_gen_comp/Madd_sAdd14
+    SLICE_X44Y73.COUT    Topcyd                0.396   key_gen_comp/sAdd<15>
+                                                       key_gen_comp/Madd_sAdd_lut<0>15
+                                                       key_gen_comp/Madd_sAdd_cy<0>_14
+    SLICE_X44Y74.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>15
+    SLICE_X44Y74.COUT    Tbyp                  0.089   key_gen_comp/sAdd<19>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_18
+    SLICE_X44Y75.CIN     net (fanout=1)        0.007   key_gen_comp/Madd_sAdd_cy<0>19
+    SLICE_X44Y75.COUT    Tbyp                  0.089   key_gen_comp/sAdd<23>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_22
+    SLICE_X44Y76.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>23
+    SLICE_X44Y76.COUT    Tbyp                  0.089   key_gen_comp/sAdd<27>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_26
+    SLICE_X44Y77.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>27
+    SLICE_X44Y77.BQ      Tito_logic            0.481   key_gen_comp/sAdd<29>
+                                                       key_gen_comp/Madd_sAdd_xor<0>_30
+                                                       key_gen_comp/sAdd<29>_rt
+    SLICE_X34Y67.A6      net (fanout=3)        0.656   key_gen_comp/sAdd<29>
+    SLICE_X34Y67.COUT    Topcya                0.476   key_gen_comp/Madd_bAShAdd_cy<3>
+                                                       key_gen_comp/Madd_bAShAdd_lut<0>
+                                                       key_gen_comp/Madd_bAShAdd_cy<3>
+    SLICE_X34Y68.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<3>
+    SLICE_X34Y68.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<7>
+                                                       key_gen_comp/Madd_bAShAdd_cy<7>
+    SLICE_X34Y69.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<7>
+    SLICE_X34Y69.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<11>
+                                                       key_gen_comp/Madd_bAShAdd_cy<11>
+    SLICE_X34Y70.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<11>
+    SLICE_X34Y70.BMUX    Tcinb                 0.342   key_gen_comp/Madd_bAShAdd_cy<15>
+                                                       key_gen_comp/Madd_bAShAdd_cy<15>
+    SLICE_X28Y65.B2      net (fanout=2)        0.889   key_gen_comp/bAShAdd<13>
+    SLICE_X28Y65.COUT    Topcyb                0.509   key_gen_comp/Madd_lAdd_cy<15>
+                                                       key_gen_comp/Madd_lAdd_lut<13>
+                                                       key_gen_comp/Madd_lAdd_cy<15>
+    SLICE_X28Y66.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_lAdd_cy<15>
+    SLICE_X28Y66.COUT    Tbyp                  0.089   key_gen_comp/Madd_lAdd_cy<19>
+                                                       key_gen_comp/Madd_lAdd_cy<19>
+    SLICE_X28Y67.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_lAdd_cy<19>
+    SLICE_X28Y67.CMUX    Tcinc                 0.314   key_gen_comp/Madd_lAdd_cy<23>
+                                                       key_gen_comp/Madd_lAdd_cy<23>
+    SLICE_X15Y64.C2      net (fanout=4)        1.283   key_gen_comp/lAdd<22>
+    SLICE_X15Y64.C       Tilo                  0.097   key_gen_comp/bAShAdd<3>_mmx_out13
+                                                       key_gen_comp/bAShAdd<1>71
+    SLICE_X15Y64.D4      net (fanout=10)       0.353   key_gen_comp/bAShAdd<1>_mmx_out15
+    SLICE_X15Y64.D       Tilo                  0.097   key_gen_comp/bAShAdd<3>_mmx_out13
+                                                       key_gen_comp/bAShAdd<3>51
+    SLICE_X30Y68.B2      net (fanout=10)       1.334   key_gen_comp/bAShAdd<3>_mmx_out13
+    SLICE_X30Y68.CLK     Tas                   0.025   key_gen_comp/b<9>
+                                                       key_gen_comp/Mmux_lShf311
+                                                       key_gen_comp/b_8
+    -------------------------------------------------  ---------------------------
+    Total                                     12.349ns (4.381ns logic, 7.968ns route)
+                                                       (35.5% logic, 64.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point key_gen_comp/lArr_0_26 (SLICE_X15Y58.C1), 9242864 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.096ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               key_gen_comp/jCnt_0 (FF)
+  Destination:          key_gen_comp/lArr_0_26 (FF)
+  Requirement:          12.500ns
+  Data Path Delay:      12.345ns (Levels of Logic = 20)
+  Clock Path Skew:      -0.024ns (0.580 - 0.604)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 12.500ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: key_gen_comp/jCnt_0 to key_gen_comp/lArr_0_26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y85.AQ      Tcko                  0.341   key_gen_comp/jCnt<4>
+                                                       key_gen_comp/jCnt_0
+    SLICE_X64Y71.A5      net (fanout=248)      1.270   key_gen_comp/jCnt<0>
+    SLICE_X64Y71.A       Tilo                  0.097   key_gen_comp/sArr_1<15>
+                                                       key_gen_comp/mux5_10
+    SLICE_X65Y71.D2      net (fanout=1)        0.638   key_gen_comp/mux5_10
+    SLICE_X65Y71.CMUX    Topdc                 0.408   key_gen_comp/mux5_7
+                                                       key_gen_comp/mux5_4
+                                                       key_gen_comp/mux5_2_f7
+    SLICE_X44Y73.C4      net (fanout=1)        1.084   key_gen_comp/n0687<14>
+    SLICE_X44Y73.CMUX    Tilo                  0.258   key_gen_comp/sAdd<15>
+                                                       key_gen_comp/Madd_sAdd14
+    SLICE_X44Y73.D3      net (fanout=2)        0.454   key_gen_comp/Madd_sAdd14
+    SLICE_X44Y73.COUT    Topcyd                0.396   key_gen_comp/sAdd<15>
+                                                       key_gen_comp/Madd_sAdd_lut<0>15
+                                                       key_gen_comp/Madd_sAdd_cy<0>_14
+    SLICE_X44Y74.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>15
+    SLICE_X44Y74.COUT    Tbyp                  0.089   key_gen_comp/sAdd<19>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_18
+    SLICE_X44Y75.CIN     net (fanout=1)        0.007   key_gen_comp/Madd_sAdd_cy<0>19
+    SLICE_X44Y75.COUT    Tbyp                  0.089   key_gen_comp/sAdd<23>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_22
+    SLICE_X44Y76.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>23
+    SLICE_X44Y76.COUT    Tbyp                  0.089   key_gen_comp/sAdd<27>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_26
+    SLICE_X44Y77.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>27
+    SLICE_X44Y77.BQ      Tito_logic            0.481   key_gen_comp/sAdd<29>
+                                                       key_gen_comp/Madd_sAdd_xor<0>_30
+                                                       key_gen_comp/sAdd<29>_rt
+    SLICE_X34Y67.A6      net (fanout=3)        0.656   key_gen_comp/sAdd<29>
+    SLICE_X34Y67.COUT    Topcya                0.476   key_gen_comp/Madd_bAShAdd_cy<3>
+                                                       key_gen_comp/Madd_bAShAdd_lut<0>
+                                                       key_gen_comp/Madd_bAShAdd_cy<3>
+    SLICE_X34Y68.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<3>
+    SLICE_X34Y68.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<7>
+                                                       key_gen_comp/Madd_bAShAdd_cy<7>
+    SLICE_X34Y69.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<7>
+    SLICE_X34Y69.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<11>
+                                                       key_gen_comp/Madd_bAShAdd_cy<11>
+    SLICE_X34Y70.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<11>
+    SLICE_X34Y70.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<15>
+                                                       key_gen_comp/Madd_bAShAdd_cy<15>
+    SLICE_X34Y71.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<15>
+    SLICE_X34Y71.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<19>
+                                                       key_gen_comp/Madd_bAShAdd_cy<19>
+    SLICE_X34Y72.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<19>
+    SLICE_X34Y72.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<23>
+                                                       key_gen_comp/Madd_bAShAdd_cy<23>
+    SLICE_X34Y73.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<23>
+    SLICE_X34Y73.BMUX    Tcinb                 0.342   key_gen_comp/Madd_bAShAdd_cy<27>
+                                                       key_gen_comp/Madd_bAShAdd_cy<27>
+    SLICE_X28Y68.B2      net (fanout=2)        0.889   key_gen_comp/bAShAdd<25>
+    SLICE_X28Y68.COUT    Topcyb                0.509   key_gen_comp/Madd_lAdd_cy<27>
+                                                       key_gen_comp/Madd_lAdd_lut<25>
+                                                       key_gen_comp/Madd_lAdd_cy<27>
+    SLICE_X28Y69.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_lAdd_cy<27>
+    SLICE_X28Y69.AMUX    Tcina                 0.286   key_gen_comp/lAdd<31>
+                                                       key_gen_comp/Madd_lAdd_xor<31>
+    SLICE_X29Y69.B1      net (fanout=4)        0.639   key_gen_comp/lAdd<28>
+    SLICE_X29Y69.B       Tilo                  0.097   key_gen_comp/bAShAdd<1>_mmx_out31
+                                                       key_gen_comp/bAShAdd<1>251
+    SLICE_X13Y59.B4      net (fanout=12)       1.120   key_gen_comp/bAShAdd<1>_mmx_out31
+    SLICE_X13Y59.B       Tilo                  0.097   key_gen_comp/lArr_3<27>
+                                                       key_gen_comp/bAShAdd<3>81
+    SLICE_X15Y58.C1      net (fanout=8)        1.008   key_gen_comp/bAShAdd<3>_mmx_out16
+    SLICE_X15Y58.CLK     Tas                   0.065   key_gen_comp/lArr_0<27>
+                                                       key_gen_comp/Mmux_lArr[0][31]_lArr[0][31]_mux_44_OUT191
+                                                       key_gen_comp/lArr_0_26
+    -------------------------------------------------  ---------------------------
+    Total                                     12.345ns (4.580ns logic, 7.765ns route)
+                                                       (37.1% logic, 62.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.099ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               key_gen_comp/jCnt_0 (FF)
+  Destination:          key_gen_comp/lArr_0_26 (FF)
+  Requirement:          12.500ns
+  Data Path Delay:      12.342ns (Levels of Logic = 20)
+  Clock Path Skew:      -0.024ns (0.580 - 0.604)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 12.500ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: key_gen_comp/jCnt_0 to key_gen_comp/lArr_0_26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y85.AQ      Tcko                  0.341   key_gen_comp/jCnt<4>
+                                                       key_gen_comp/jCnt_0
+    SLICE_X64Y71.A5      net (fanout=248)      1.270   key_gen_comp/jCnt<0>
+    SLICE_X64Y71.A       Tilo                  0.097   key_gen_comp/sArr_1<15>
+                                                       key_gen_comp/mux5_10
+    SLICE_X65Y71.D2      net (fanout=1)        0.638   key_gen_comp/mux5_10
+    SLICE_X65Y71.CMUX    Topdc                 0.408   key_gen_comp/mux5_7
+                                                       key_gen_comp/mux5_4
+                                                       key_gen_comp/mux5_2_f7
+    SLICE_X44Y73.C4      net (fanout=1)        1.084   key_gen_comp/n0687<14>
+    SLICE_X44Y73.CMUX    Tilo                  0.258   key_gen_comp/sAdd<15>
+                                                       key_gen_comp/Madd_sAdd14
+    SLICE_X44Y73.D3      net (fanout=2)        0.454   key_gen_comp/Madd_sAdd14
+    SLICE_X44Y73.COUT    Topcyd                0.396   key_gen_comp/sAdd<15>
+                                                       key_gen_comp/Madd_sAdd_lut<0>15
+                                                       key_gen_comp/Madd_sAdd_cy<0>_14
+    SLICE_X44Y74.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>15
+    SLICE_X44Y74.COUT    Tbyp                  0.089   key_gen_comp/sAdd<19>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_18
+    SLICE_X44Y75.CIN     net (fanout=1)        0.007   key_gen_comp/Madd_sAdd_cy<0>19
+    SLICE_X44Y75.COUT    Tbyp                  0.089   key_gen_comp/sAdd<23>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_22
+    SLICE_X44Y76.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>23
+    SLICE_X44Y76.COUT    Tbyp                  0.089   key_gen_comp/sAdd<27>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_26
+    SLICE_X44Y77.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>27
+    SLICE_X44Y77.BQ      Tito_logic            0.481   key_gen_comp/sAdd<29>
+                                                       key_gen_comp/Madd_sAdd_xor<0>_30
+                                                       key_gen_comp/sAdd<29>_rt
+    SLICE_X34Y67.A6      net (fanout=3)        0.656   key_gen_comp/sAdd<29>
+    SLICE_X34Y67.COUT    Topcya                0.476   key_gen_comp/Madd_bAShAdd_cy<3>
+                                                       key_gen_comp/Madd_bAShAdd_lut<0>
+                                                       key_gen_comp/Madd_bAShAdd_cy<3>
+    SLICE_X34Y68.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<3>
+    SLICE_X34Y68.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<7>
+                                                       key_gen_comp/Madd_bAShAdd_cy<7>
+    SLICE_X34Y69.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<7>
+    SLICE_X34Y69.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<11>
+                                                       key_gen_comp/Madd_bAShAdd_cy<11>
+    SLICE_X34Y70.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<11>
+    SLICE_X34Y70.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<15>
+                                                       key_gen_comp/Madd_bAShAdd_cy<15>
+    SLICE_X34Y71.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<15>
+    SLICE_X34Y71.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<19>
+                                                       key_gen_comp/Madd_bAShAdd_cy<19>
+    SLICE_X34Y72.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<19>
+    SLICE_X34Y72.BMUX    Tcinb                 0.342   key_gen_comp/Madd_bAShAdd_cy<23>
+                                                       key_gen_comp/Madd_bAShAdd_cy<23>
+    SLICE_X28Y67.B2      net (fanout=2)        0.889   key_gen_comp/bAShAdd<21>
+    SLICE_X28Y67.COUT    Topcyb                0.509   key_gen_comp/Madd_lAdd_cy<23>
+                                                       key_gen_comp/Madd_lAdd_lut<21>
+                                                       key_gen_comp/Madd_lAdd_cy<23>
+    SLICE_X28Y68.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_lAdd_cy<23>
+    SLICE_X28Y68.COUT    Tbyp                  0.089   key_gen_comp/Madd_lAdd_cy<27>
+                                                       key_gen_comp/Madd_lAdd_cy<27>
+    SLICE_X28Y69.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_lAdd_cy<27>
+    SLICE_X28Y69.AMUX    Tcina                 0.286   key_gen_comp/lAdd<31>
+                                                       key_gen_comp/Madd_lAdd_xor<31>
+    SLICE_X29Y69.B1      net (fanout=4)        0.639   key_gen_comp/lAdd<28>
+    SLICE_X29Y69.B       Tilo                  0.097   key_gen_comp/bAShAdd<1>_mmx_out31
+                                                       key_gen_comp/bAShAdd<1>251
+    SLICE_X13Y59.B4      net (fanout=12)       1.120   key_gen_comp/bAShAdd<1>_mmx_out31
+    SLICE_X13Y59.B       Tilo                  0.097   key_gen_comp/lArr_3<27>
+                                                       key_gen_comp/bAShAdd<3>81
+    SLICE_X15Y58.C1      net (fanout=8)        1.008   key_gen_comp/bAShAdd<3>_mmx_out16
+    SLICE_X15Y58.CLK     Tas                   0.065   key_gen_comp/lArr_0<27>
+                                                       key_gen_comp/Mmux_lArr[0][31]_lArr[0][31]_mux_44_OUT191
+                                                       key_gen_comp/lArr_0_26
+    -------------------------------------------------  ---------------------------
+    Total                                     12.342ns (4.577ns logic, 7.765ns route)
+                                                       (37.1% logic, 62.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.101ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               key_gen_comp/jCnt_0 (FF)
+  Destination:          key_gen_comp/lArr_0_26 (FF)
+  Requirement:          12.500ns
+  Data Path Delay:      12.340ns (Levels of Logic = 20)
+  Clock Path Skew:      -0.024ns (0.580 - 0.604)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 12.500ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: key_gen_comp/jCnt_0 to key_gen_comp/lArr_0_26
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y85.AQ      Tcko                  0.341   key_gen_comp/jCnt<4>
+                                                       key_gen_comp/jCnt_0
+    SLICE_X64Y71.A5      net (fanout=248)      1.270   key_gen_comp/jCnt<0>
+    SLICE_X64Y71.A       Tilo                  0.097   key_gen_comp/sArr_1<15>
+                                                       key_gen_comp/mux5_10
+    SLICE_X65Y71.D2      net (fanout=1)        0.638   key_gen_comp/mux5_10
+    SLICE_X65Y71.CMUX    Topdc                 0.408   key_gen_comp/mux5_7
+                                                       key_gen_comp/mux5_4
+                                                       key_gen_comp/mux5_2_f7
+    SLICE_X44Y73.C4      net (fanout=1)        1.084   key_gen_comp/n0687<14>
+    SLICE_X44Y73.CMUX    Tilo                  0.258   key_gen_comp/sAdd<15>
+                                                       key_gen_comp/Madd_sAdd14
+    SLICE_X44Y73.D3      net (fanout=2)        0.454   key_gen_comp/Madd_sAdd14
+    SLICE_X44Y73.COUT    Topcyd                0.396   key_gen_comp/sAdd<15>
+                                                       key_gen_comp/Madd_sAdd_lut<0>15
+                                                       key_gen_comp/Madd_sAdd_cy<0>_14
+    SLICE_X44Y74.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>15
+    SLICE_X44Y74.COUT    Tbyp                  0.089   key_gen_comp/sAdd<19>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_18
+    SLICE_X44Y75.CIN     net (fanout=1)        0.007   key_gen_comp/Madd_sAdd_cy<0>19
+    SLICE_X44Y75.COUT    Tbyp                  0.089   key_gen_comp/sAdd<23>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_22
+    SLICE_X44Y76.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>23
+    SLICE_X44Y76.COUT    Tbyp                  0.089   key_gen_comp/sAdd<27>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_26
+    SLICE_X44Y77.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>27
+    SLICE_X44Y77.BQ      Tito_logic            0.481   key_gen_comp/sAdd<29>
+                                                       key_gen_comp/Madd_sAdd_xor<0>_30
+                                                       key_gen_comp/sAdd<29>_rt
+    SLICE_X34Y67.A6      net (fanout=3)        0.656   key_gen_comp/sAdd<29>
+    SLICE_X34Y67.COUT    Topcya                0.476   key_gen_comp/Madd_bAShAdd_cy<3>
+                                                       key_gen_comp/Madd_bAShAdd_lut<0>
+                                                       key_gen_comp/Madd_bAShAdd_cy<3>
+    SLICE_X34Y68.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<3>
+    SLICE_X34Y68.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<7>
+                                                       key_gen_comp/Madd_bAShAdd_cy<7>
+    SLICE_X34Y69.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<7>
+    SLICE_X34Y69.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<11>
+                                                       key_gen_comp/Madd_bAShAdd_cy<11>
+    SLICE_X34Y70.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<11>
+    SLICE_X34Y70.AMUX    Tcina                 0.269   key_gen_comp/Madd_bAShAdd_cy<15>
+                                                       key_gen_comp/Madd_bAShAdd_cy<15>
+    SLICE_X28Y65.A2      net (fanout=2)        0.983   key_gen_comp/bAShAdd<12>
+    SLICE_X28Y65.COUT    Topcya                0.492   key_gen_comp/Madd_lAdd_cy<15>
+                                                       key_gen_comp/Madd_lAdd_lut<12>
+                                                       key_gen_comp/Madd_lAdd_cy<15>
+    SLICE_X28Y66.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_lAdd_cy<15>
+    SLICE_X28Y66.COUT    Tbyp                  0.089   key_gen_comp/Madd_lAdd_cy<19>
+                                                       key_gen_comp/Madd_lAdd_cy<19>
+    SLICE_X28Y67.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_lAdd_cy<19>
+    SLICE_X28Y67.COUT    Tbyp                  0.089   key_gen_comp/Madd_lAdd_cy<23>
+                                                       key_gen_comp/Madd_lAdd_cy<23>
+    SLICE_X28Y68.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_lAdd_cy<23>
+    SLICE_X28Y68.COUT    Tbyp                  0.089   key_gen_comp/Madd_lAdd_cy<27>
+                                                       key_gen_comp/Madd_lAdd_cy<27>
+    SLICE_X28Y69.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_lAdd_cy<27>
+    SLICE_X28Y69.AMUX    Tcina                 0.286   key_gen_comp/lAdd<31>
+                                                       key_gen_comp/Madd_lAdd_xor<31>
+    SLICE_X29Y69.B1      net (fanout=4)        0.639   key_gen_comp/lAdd<28>
+    SLICE_X29Y69.B       Tilo                  0.097   key_gen_comp/bAShAdd<1>_mmx_out31
+                                                       key_gen_comp/bAShAdd<1>251
+    SLICE_X13Y59.B4      net (fanout=12)       1.120   key_gen_comp/bAShAdd<1>_mmx_out31
+    SLICE_X13Y59.B       Tilo                  0.097   key_gen_comp/lArr_3<27>
+                                                       key_gen_comp/bAShAdd<3>81
+    SLICE_X15Y58.C1      net (fanout=8)        1.008   key_gen_comp/bAShAdd<3>_mmx_out16
+    SLICE_X15Y58.CLK     Tas                   0.065   key_gen_comp/lArr_0<27>
+                                                       key_gen_comp/Mmux_lArr[0][31]_lArr[0][31]_mux_44_OUT191
+                                                       key_gen_comp/lArr_0_26
+    -------------------------------------------------  ---------------------------
+    Total                                     12.340ns (4.481ns logic, 7.859ns route)
+                                                       (36.3% logic, 63.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point key_gen_comp/lArr_2_8 (SLICE_X15Y56.A2), 9129810 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     0.139ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               key_gen_comp/jCnt_0 (FF)
+  Destination:          key_gen_comp/lArr_2_8 (FF)
+  Requirement:          12.500ns
+  Data Path Delay:      12.303ns (Levels of Logic = 18)
+  Clock Path Skew:      -0.023ns (0.581 - 0.604)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 12.500ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: key_gen_comp/jCnt_0 to key_gen_comp/lArr_2_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y85.AQ      Tcko                  0.341   key_gen_comp/jCnt<4>
+                                                       key_gen_comp/jCnt_0
+    SLICE_X64Y71.A5      net (fanout=248)      1.270   key_gen_comp/jCnt<0>
+    SLICE_X64Y71.A       Tilo                  0.097   key_gen_comp/sArr_1<15>
+                                                       key_gen_comp/mux5_10
+    SLICE_X65Y71.D2      net (fanout=1)        0.638   key_gen_comp/mux5_10
+    SLICE_X65Y71.CMUX    Topdc                 0.408   key_gen_comp/mux5_7
+                                                       key_gen_comp/mux5_4
+                                                       key_gen_comp/mux5_2_f7
+    SLICE_X44Y73.C4      net (fanout=1)        1.084   key_gen_comp/n0687<14>
+    SLICE_X44Y73.CMUX    Tilo                  0.258   key_gen_comp/sAdd<15>
+                                                       key_gen_comp/Madd_sAdd14
+    SLICE_X44Y73.D3      net (fanout=2)        0.454   key_gen_comp/Madd_sAdd14
+    SLICE_X44Y73.COUT    Topcyd                0.396   key_gen_comp/sAdd<15>
+                                                       key_gen_comp/Madd_sAdd_lut<0>15
+                                                       key_gen_comp/Madd_sAdd_cy<0>_14
+    SLICE_X44Y74.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>15
+    SLICE_X44Y74.COUT    Tbyp                  0.089   key_gen_comp/sAdd<19>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_18
+    SLICE_X44Y75.CIN     net (fanout=1)        0.007   key_gen_comp/Madd_sAdd_cy<0>19
+    SLICE_X44Y75.COUT    Tbyp                  0.089   key_gen_comp/sAdd<23>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_22
+    SLICE_X44Y76.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>23
+    SLICE_X44Y76.COUT    Tbyp                  0.089   key_gen_comp/sAdd<27>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_26
+    SLICE_X44Y77.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>27
+    SLICE_X44Y77.BQ      Tito_logic            0.481   key_gen_comp/sAdd<29>
+                                                       key_gen_comp/Madd_sAdd_xor<0>_30
+                                                       key_gen_comp/sAdd<29>_rt
+    SLICE_X34Y67.A6      net (fanout=3)        0.656   key_gen_comp/sAdd<29>
+    SLICE_X34Y67.COUT    Topcya                0.476   key_gen_comp/Madd_bAShAdd_cy<3>
+                                                       key_gen_comp/Madd_bAShAdd_lut<0>
+                                                       key_gen_comp/Madd_bAShAdd_cy<3>
+    SLICE_X34Y68.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<3>
+    SLICE_X34Y68.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<7>
+                                                       key_gen_comp/Madd_bAShAdd_cy<7>
+    SLICE_X34Y69.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<7>
+    SLICE_X34Y69.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<11>
+                                                       key_gen_comp/Madd_bAShAdd_cy<11>
+    SLICE_X34Y70.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<11>
+    SLICE_X34Y70.AMUX    Tcina                 0.269   key_gen_comp/Madd_bAShAdd_cy<15>
+                                                       key_gen_comp/Madd_bAShAdd_cy<15>
+    SLICE_X28Y65.A2      net (fanout=2)        0.983   key_gen_comp/bAShAdd<12>
+    SLICE_X28Y65.COUT    Topcya                0.492   key_gen_comp/Madd_lAdd_cy<15>
+                                                       key_gen_comp/Madd_lAdd_lut<12>
+                                                       key_gen_comp/Madd_lAdd_cy<15>
+    SLICE_X28Y66.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_lAdd_cy<15>
+    SLICE_X28Y66.COUT    Tbyp                  0.089   key_gen_comp/Madd_lAdd_cy<19>
+                                                       key_gen_comp/Madd_lAdd_cy<19>
+    SLICE_X28Y67.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_lAdd_cy<19>
+    SLICE_X28Y67.CMUX    Tcinc                 0.314   key_gen_comp/Madd_lAdd_cy<23>
+                                                       key_gen_comp/Madd_lAdd_cy<23>
+    SLICE_X15Y64.C2      net (fanout=4)        1.283   key_gen_comp/lAdd<22>
+    SLICE_X15Y64.C       Tilo                  0.097   key_gen_comp/bAShAdd<3>_mmx_out13
+                                                       key_gen_comp/bAShAdd<1>71
+    SLICE_X15Y64.D4      net (fanout=10)       0.353   key_gen_comp/bAShAdd<1>_mmx_out15
+    SLICE_X15Y64.D       Tilo                  0.097   key_gen_comp/bAShAdd<3>_mmx_out13
+                                                       key_gen_comp/bAShAdd<3>51
+    SLICE_X15Y56.A2      net (fanout=10)       1.242   key_gen_comp/bAShAdd<3>_mmx_out13
+    SLICE_X15Y56.CLK     Tas                   0.067   key_gen_comp/lArr_2<11>
+                                                       key_gen_comp/Mmux_lArr[2][31]_lArr[2][31]_mux_64_OUT311
+                                                       key_gen_comp/lArr_2_8
+    -------------------------------------------------  ---------------------------
+    Total                                     12.303ns (4.333ns logic, 7.970ns route)
+                                                       (35.2% logic, 64.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.140ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               key_gen_comp/jCnt_0 (FF)
+  Destination:          key_gen_comp/lArr_2_8 (FF)
+  Requirement:          12.500ns
+  Data Path Delay:      12.302ns (Levels of Logic = 18)
+  Clock Path Skew:      -0.023ns (0.581 - 0.604)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 12.500ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: key_gen_comp/jCnt_0 to key_gen_comp/lArr_2_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y85.AQ      Tcko                  0.341   key_gen_comp/jCnt<4>
+                                                       key_gen_comp/jCnt_0
+    SLICE_X64Y71.A5      net (fanout=248)      1.270   key_gen_comp/jCnt<0>
+    SLICE_X64Y71.A       Tilo                  0.097   key_gen_comp/sArr_1<15>
+                                                       key_gen_comp/mux5_10
+    SLICE_X65Y71.D2      net (fanout=1)        0.638   key_gen_comp/mux5_10
+    SLICE_X65Y71.CMUX    Topdc                 0.408   key_gen_comp/mux5_7
+                                                       key_gen_comp/mux5_4
+                                                       key_gen_comp/mux5_2_f7
+    SLICE_X44Y73.C4      net (fanout=1)        1.084   key_gen_comp/n0687<14>
+    SLICE_X44Y73.CMUX    Tilo                  0.258   key_gen_comp/sAdd<15>
+                                                       key_gen_comp/Madd_sAdd14
+    SLICE_X44Y73.D3      net (fanout=2)        0.454   key_gen_comp/Madd_sAdd14
+    SLICE_X44Y73.COUT    Topcyd                0.396   key_gen_comp/sAdd<15>
+                                                       key_gen_comp/Madd_sAdd_lut<0>15
+                                                       key_gen_comp/Madd_sAdd_cy<0>_14
+    SLICE_X44Y74.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>15
+    SLICE_X44Y74.COUT    Tbyp                  0.089   key_gen_comp/sAdd<19>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_18
+    SLICE_X44Y75.CIN     net (fanout=1)        0.007   key_gen_comp/Madd_sAdd_cy<0>19
+    SLICE_X44Y75.COUT    Tbyp                  0.089   key_gen_comp/sAdd<23>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_22
+    SLICE_X44Y76.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>23
+    SLICE_X44Y76.COUT    Tbyp                  0.089   key_gen_comp/sAdd<27>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_26
+    SLICE_X44Y77.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>27
+    SLICE_X44Y77.BQ      Tito_logic            0.481   key_gen_comp/sAdd<29>
+                                                       key_gen_comp/Madd_sAdd_xor<0>_30
+                                                       key_gen_comp/sAdd<29>_rt
+    SLICE_X34Y67.A6      net (fanout=3)        0.656   key_gen_comp/sAdd<29>
+    SLICE_X34Y67.COUT    Topcya                0.476   key_gen_comp/Madd_bAShAdd_cy<3>
+                                                       key_gen_comp/Madd_bAShAdd_lut<0>
+                                                       key_gen_comp/Madd_bAShAdd_cy<3>
+    SLICE_X34Y68.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<3>
+    SLICE_X34Y68.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<7>
+                                                       key_gen_comp/Madd_bAShAdd_cy<7>
+    SLICE_X34Y69.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<7>
+    SLICE_X34Y69.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<11>
+                                                       key_gen_comp/Madd_bAShAdd_cy<11>
+    SLICE_X34Y70.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<11>
+    SLICE_X34Y70.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<15>
+                                                       key_gen_comp/Madd_bAShAdd_cy<15>
+    SLICE_X34Y71.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<15>
+    SLICE_X34Y71.BMUX    Tcinb                 0.342   key_gen_comp/Madd_bAShAdd_cy<19>
+                                                       key_gen_comp/Madd_bAShAdd_cy<19>
+    SLICE_X28Y66.B2      net (fanout=2)        0.889   key_gen_comp/bAShAdd<17>
+    SLICE_X28Y66.COUT    Topcyb                0.509   key_gen_comp/Madd_lAdd_cy<19>
+                                                       key_gen_comp/Madd_lAdd_lut<17>
+                                                       key_gen_comp/Madd_lAdd_cy<19>
+    SLICE_X28Y67.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_lAdd_cy<19>
+    SLICE_X28Y67.CMUX    Tcinc                 0.314   key_gen_comp/Madd_lAdd_cy<23>
+                                                       key_gen_comp/Madd_lAdd_cy<23>
+    SLICE_X15Y64.C2      net (fanout=4)        1.283   key_gen_comp/lAdd<22>
+    SLICE_X15Y64.C       Tilo                  0.097   key_gen_comp/bAShAdd<3>_mmx_out13
+                                                       key_gen_comp/bAShAdd<1>71
+    SLICE_X15Y64.D4      net (fanout=10)       0.353   key_gen_comp/bAShAdd<1>_mmx_out15
+    SLICE_X15Y64.D       Tilo                  0.097   key_gen_comp/bAShAdd<3>_mmx_out13
+                                                       key_gen_comp/bAShAdd<3>51
+    SLICE_X15Y56.A2      net (fanout=10)       1.242   key_gen_comp/bAShAdd<3>_mmx_out13
+    SLICE_X15Y56.CLK     Tas                   0.067   key_gen_comp/lArr_2<11>
+                                                       key_gen_comp/Mmux_lArr[2][31]_lArr[2][31]_mux_64_OUT311
+                                                       key_gen_comp/lArr_2_8
+    -------------------------------------------------  ---------------------------
+    Total                                     12.302ns (4.426ns logic, 7.876ns route)
+                                                       (36.0% logic, 64.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     0.143ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               key_gen_comp/jCnt_0 (FF)
+  Destination:          key_gen_comp/lArr_2_8 (FF)
+  Requirement:          12.500ns
+  Data Path Delay:      12.299ns (Levels of Logic = 18)
+  Clock Path Skew:      -0.023ns (0.581 - 0.604)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 12.500ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: key_gen_comp/jCnt_0 to key_gen_comp/lArr_2_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X51Y85.AQ      Tcko                  0.341   key_gen_comp/jCnt<4>
+                                                       key_gen_comp/jCnt_0
+    SLICE_X64Y71.A5      net (fanout=248)      1.270   key_gen_comp/jCnt<0>
+    SLICE_X64Y71.A       Tilo                  0.097   key_gen_comp/sArr_1<15>
+                                                       key_gen_comp/mux5_10
+    SLICE_X65Y71.D2      net (fanout=1)        0.638   key_gen_comp/mux5_10
+    SLICE_X65Y71.CMUX    Topdc                 0.408   key_gen_comp/mux5_7
+                                                       key_gen_comp/mux5_4
+                                                       key_gen_comp/mux5_2_f7
+    SLICE_X44Y73.C4      net (fanout=1)        1.084   key_gen_comp/n0687<14>
+    SLICE_X44Y73.CMUX    Tilo                  0.258   key_gen_comp/sAdd<15>
+                                                       key_gen_comp/Madd_sAdd14
+    SLICE_X44Y73.D3      net (fanout=2)        0.454   key_gen_comp/Madd_sAdd14
+    SLICE_X44Y73.COUT    Topcyd                0.396   key_gen_comp/sAdd<15>
+                                                       key_gen_comp/Madd_sAdd_lut<0>15
+                                                       key_gen_comp/Madd_sAdd_cy<0>_14
+    SLICE_X44Y74.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>15
+    SLICE_X44Y74.COUT    Tbyp                  0.089   key_gen_comp/sAdd<19>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_18
+    SLICE_X44Y75.CIN     net (fanout=1)        0.007   key_gen_comp/Madd_sAdd_cy<0>19
+    SLICE_X44Y75.COUT    Tbyp                  0.089   key_gen_comp/sAdd<23>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_22
+    SLICE_X44Y76.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>23
+    SLICE_X44Y76.COUT    Tbyp                  0.089   key_gen_comp/sAdd<27>
+                                                       key_gen_comp/Madd_sAdd_cy<0>_26
+    SLICE_X44Y77.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_sAdd_cy<0>27
+    SLICE_X44Y77.BQ      Tito_logic            0.481   key_gen_comp/sAdd<29>
+                                                       key_gen_comp/Madd_sAdd_xor<0>_30
+                                                       key_gen_comp/sAdd<29>_rt
+    SLICE_X34Y67.A6      net (fanout=3)        0.656   key_gen_comp/sAdd<29>
+    SLICE_X34Y67.COUT    Topcya                0.476   key_gen_comp/Madd_bAShAdd_cy<3>
+                                                       key_gen_comp/Madd_bAShAdd_lut<0>
+                                                       key_gen_comp/Madd_bAShAdd_cy<3>
+    SLICE_X34Y68.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<3>
+    SLICE_X34Y68.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<7>
+                                                       key_gen_comp/Madd_bAShAdd_cy<7>
+    SLICE_X34Y69.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<7>
+    SLICE_X34Y69.COUT    Tbyp                  0.092   key_gen_comp/Madd_bAShAdd_cy<11>
+                                                       key_gen_comp/Madd_bAShAdd_cy<11>
+    SLICE_X34Y70.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_bAShAdd_cy<11>
+    SLICE_X34Y70.BMUX    Tcinb                 0.342   key_gen_comp/Madd_bAShAdd_cy<15>
+                                                       key_gen_comp/Madd_bAShAdd_cy<15>
+    SLICE_X28Y65.B2      net (fanout=2)        0.889   key_gen_comp/bAShAdd<13>
+    SLICE_X28Y65.COUT    Topcyb                0.509   key_gen_comp/Madd_lAdd_cy<15>
+                                                       key_gen_comp/Madd_lAdd_lut<13>
+                                                       key_gen_comp/Madd_lAdd_cy<15>
+    SLICE_X28Y66.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_lAdd_cy<15>
+    SLICE_X28Y66.COUT    Tbyp                  0.089   key_gen_comp/Madd_lAdd_cy<19>
+                                                       key_gen_comp/Madd_lAdd_cy<19>
+    SLICE_X28Y67.CIN     net (fanout=1)        0.000   key_gen_comp/Madd_lAdd_cy<19>
+    SLICE_X28Y67.CMUX    Tcinc                 0.314   key_gen_comp/Madd_lAdd_cy<23>
+                                                       key_gen_comp/Madd_lAdd_cy<23>
+    SLICE_X15Y64.C2      net (fanout=4)        1.283   key_gen_comp/lAdd<22>
+    SLICE_X15Y64.C       Tilo                  0.097   key_gen_comp/bAShAdd<3>_mmx_out13
+                                                       key_gen_comp/bAShAdd<1>71
+    SLICE_X15Y64.D4      net (fanout=10)       0.353   key_gen_comp/bAShAdd<1>_mmx_out15
+    SLICE_X15Y64.D       Tilo                  0.097   key_gen_comp/bAShAdd<3>_mmx_out13
+                                                       key_gen_comp/bAShAdd<3>51
+    SLICE_X15Y56.A2      net (fanout=10)       1.242   key_gen_comp/bAShAdd<3>_mmx_out13
+    SLICE_X15Y56.CLK     Tas                   0.067   key_gen_comp/lArr_2<11>
+                                                       key_gen_comp/Mmux_lArr[2][31]_lArr[2][31]_mux_64_OUT311
+                                                       key_gen_comp/lArr_2_8
+    -------------------------------------------------  ---------------------------
+    Total                                     12.299ns (4.423ns logic, 7.876ns route)
+                                                       (36.0% logic, 64.0% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 80 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point key_gen_comp/sArr_21_1 (SLICE_X46Y75.B6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.021ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               key_gen_comp/sReg_1 (FF)
+  Destination:          key_gen_comp/sArr_21_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.286ns (Levels of Logic = 1)
+  Clock Path Skew:      0.265ns (0.764 - 0.499)
+  Source Clock:         clk_BUFGP rising at 12.500ns
+  Destination Clock:    clk_BUFGP rising at 12.500ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: key_gen_comp/sReg_1 to key_gen_comp/sArr_21_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X53Y75.BQ      Tcko                  0.141   key_gen_comp/sReg<3>
+                                                       key_gen_comp/sReg_1
+    SLICE_X46Y75.B6      net (fanout=2)        0.221   key_gen_comp/sReg<1>
+    SLICE_X46Y75.CLK     Tah         (-Th)     0.076   key_gen_comp/sArr_21<3>
+                                                       key_gen_comp/sArr[0][31]_sArr[0][31]_mux_186_OUT<1>1
+                                                       key_gen_comp/sArr_21_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.286ns (0.065ns logic, 0.221ns route)
+                                                       (22.7% logic, 77.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point key_gen_comp/sArr_2_2 (SLICE_X47Y75.C5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.078ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               key_gen_comp/sReg_2 (FF)
+  Destination:          key_gen_comp/sArr_2_2 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.343ns (Levels of Logic = 1)
+  Clock Path Skew:      0.265ns (0.764 - 0.499)
+  Source Clock:         clk_BUFGP rising at 12.500ns
+  Destination Clock:    clk_BUFGP rising at 12.500ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: key_gen_comp/sReg_2 to key_gen_comp/sArr_2_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X53Y75.CQ      Tcko                  0.141   key_gen_comp/sReg<3>
+                                                       key_gen_comp/sReg_2
+    SLICE_X47Y75.C5      net (fanout=2)        0.249   key_gen_comp/sReg<2>
+    SLICE_X47Y75.CLK     Tah         (-Th)     0.047   key_gen_comp/sArr_2<3>
+                                                       key_gen_comp/sArr[0][31]_sArr[0][31]_mux_186_OUT<2>1
+                                                       key_gen_comp/sArr_2_2
+    -------------------------------------------------  ---------------------------
+    Total                                      0.343ns (0.094ns logic, 0.249ns route)
+                                                       (27.4% logic, 72.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point decrypt_comp/aSig_9 (SLICE_X34Y89.C6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.116ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               din_41 (FF)
+  Destination:          decrypt_comp/aSig_9 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.129ns (Levels of Logic = 1)
+  Clock Path Skew:      0.013ns (0.071 - 0.058)
+  Source Clock:         clk_BUFGP rising at 12.500ns
+  Destination Clock:    clk_BUFGP rising at 12.500ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: din_41 to decrypt_comp/aSig_9
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X35Y89.BQ      Tcko                  0.141   din_43
+                                                       din_41
+    SLICE_X34Y89.C6      net (fanout=3)        0.064   din_41
+    SLICE_X34Y89.CLK     Tah         (-Th)     0.076   decrypt_comp/aSig_9
+                                                       decrypt_comp/Mmux_aNxt322
+                                                       decrypt_comp/aSig_9
+    -------------------------------------------------  ---------------------------
+    Total                                      0.129ns (0.065ns logic, 0.064ns route)
+                                                       (50.4% logic, 49.6% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 80 MHz HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 10.908ns (period - min period limit)
+  Period: 12.500ns
+  Min period limit: 1.592ns (628.141MHz) (Tbcper_I(Fmax))
+  Physical resource: clk_BUFGP/BUFG/I0
+  Logical resource: clk_BUFGP/BUFG/I0
+  Location pin: BUFGCTRL_X0Y31.I0
+  Clock network: clk_BUFGP/IBUFG
+--------------------------------------------------------------------------------
+Slack: 11.500ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 12.500ns
+  Low pulse: 6.250ns
+  Low pulse limit: 0.500ns (Tcl)
+  Physical resource: Cntr<3>/CLK
+  Logical resource: Cntr_0/CK
+  Location pin: SLICE_X6Y100.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 11.500ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 12.500ns
+  High pulse: 6.250ns
+  High pulse limit: 0.500ns (Tch)
+  Physical resource: Cntr<3>/CLK
+  Logical resource: Cntr_0/CK
+  Location pin: SLICE_X6Y100.CLK
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   12.424|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 3469964567 paths, 0 nets, and 8152 connections
+
+Design statistics:
+   Minimum period:  12.424ns{1}   (Maximum frequency:  80.489MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Mon Feb 13 22:14:26 2017 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 693 MB
+
+
+

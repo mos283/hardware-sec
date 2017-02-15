@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_mutilated/testbench_isim_beh.exe" -prj "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_mutilated/testbench_beh.prj" "work.testbench" 

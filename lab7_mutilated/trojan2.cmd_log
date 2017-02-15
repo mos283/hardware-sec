@@ -1,0 +1,6 @@
+xst -intstyle ise -ifn "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_mutilated/trojan2.xst" -ofn "C:/Users/mos28/Documents/xilinx proj/hardsec/lab7_mutilated/trojan2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc7a100t-csg324-3 "trojan2.ngc" trojan2.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o trojan2_map.ncd trojan2.ngd trojan2.pcf 
+par -w -intstyle ise -ol high -mt off trojan2_map.ncd trojan2.ncd trojan2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml trojan2.twx trojan2.ncd -o trojan2.twr trojan2.pcf 
+netgen -intstyle ise -s 3  -pcf trojan2.pcf -rpw 100 -tpw 0 -ar Structure -tm trojan2 -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim trojan2.ncd trojan2_timesim.vhd 
